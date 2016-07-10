@@ -23,7 +23,7 @@ header{
 #article1>ul>li{
     float: left;
     list-style-type: none;
-    display: inline;
+    /*display: inline;*/
 }
 #article1>ul #li_left_a,
 #article1>ul #li_left_b,
@@ -70,6 +70,7 @@ h3,h4{
     overflow: hidden;
     position: relative;
     background: #fff;
+    border-bottom: 1px solid #0066cc;
 }
 #nav>ul{
     /*position: absolute;*/
