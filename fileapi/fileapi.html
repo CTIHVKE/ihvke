@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5文件api</title>
+
+    <script type="text/javascript">
+
+        function getName(){
+            var file = document.getElementById("file");
+            //document.getElementById("file").files
+            // 返回 FileList对象
+            var files = file.files;
+            for(i=0;i<files.length;i++){
+                //获取文件的名称
+                alert(files[i].name);
+            }
+        }
+
+        function getSize(){
+            var file = document.getElementById("file1");
+
+            var size =file.files[0].size;//显示文件的尺寸
+            /*
+             excel:application/vnd.ms-excel
+             word:application/msword(.doc),
+             application/vnd.openxmlformats-officedocument.wordprocessingml.document(.docx)
+             实际应用中要根据具体的type类型 限制 上传的类型 ,用正则表达式验证
+             */
+            var type =file.files[0].type;//文件的类型  image/png,image/jpeg,text/plain,text/html
+
+            //对文件列表FileList才有意义,对file对象没有作用,也就是说上传单个文件也要有数组形式访问其属性 ..
+
+            var name =file.files[0].name;
+            document.getElementById("mark").innerHTML=type;
+            alert(size+","+type+","+name);
+        }
+    </script>
+</head>
+<body>
+
+<form action="">
+    <!-- html5为文件域添加multiple="multiple"支持多文件上传，用逗号分隔 -->
+    附件:<input type="file" id="file" multiple="multiple" onblur="getName();" >
+    <!-- 添加accept属性 限制要选择的文件的类型，但只是在打开文件选择那一刻筛选出符合条件的文件
+    ,例如:下面要求文件类型为图片,打开文件选择框时只会列出所有的图片文件;
+    具体情况各大浏览器支持不一样: Firefox 列出所有文件，chrome自动筛选出符合条件的文件,IE9和FF一样，
+    可以说不支持吧
+     -->
+    头像 : <input type="file" id="file1" accept="image/*">
+    文件的类型:<mark id="mark"></mark>
+    <input type="button" value="获取文件大小" onclick="getSize();">
+</form>
+<!-- FileReader接口 示例  -->
+
+
+
+<input type="file" id="rd">
+<span id="msg"></span>
+<input type="button" value="以文本形式读取" onclick="readAsText();">
+<input type="button" value="以二进制形式读取" onclick="readAsBinaryString();">
+<input type="button" value="以dataURL形式读取" onclick="readAsDataURL();">
+
+<script type="text/javascript">
+
+    var file = document.getElementById("rd");
+
+    if (typeof FileReader =="undefined"){
+        msg.value="您的浏览器不支持FileReader";
+        //禁用文件域
+        file.setAttribute("disabled","disabled");
+    }
+    else{
+        console.info("恭喜您可以使用...");
+    }
+    //将文件读取为文本
+    function readAsText(){
+
+        var file = document.getElementById("rd").files[0];
+        var reader = new FileReader();
+        reader.readAsText(file);
+        //onload 加载成功 后触发
+        reader.onload=function(e){
+            var msg = document.getElementById("msg");
+            //把读取到的文本信息显示
+            //msg.value=this.result;
+            console.info(reader.result);
+        }
+
+    }
+    //将文件读取为二进制
+    function readAsBinaryString(){
+
+        var file = document.getElementById("rd").files[0];
+        var reader = new FileReader();
+        //二进制形式读取
+        reader.readAsBinaryString(file);
+        //onload 加载成功 后触发
+        reader.onload=function(e){
+            var msg = document.getElementById("msg");
+            //把读取到的文本信息显示
+            //msg.value=this.result;
+
+            console.info(reader.result);
+            console.info("load触发,加载成功...");
+        }
+        //加载结束触发,不管成功失败
+        reader.onloadend=function(){
+            console.info("loadend触发,加载结束...");
+        }
+        //开始加载触发
+        reader.onloadstart=function(){
+            console.info("loadstart触发,开始加载...");
+        }
+        //记载出错触发
+        reader.onerror=function(){
+            console.info("error触发,加载过程中出现错误...");
+        }
+        //中断记载触发
+        reader.onabort=function(){
+            console.info("abort触发,加载中断触发...");
+        }
+        //记载进程 ,可用progress标签显示加载进度
+        reader.onprogress=function(){
+            console.info("progress触发,加载中...");
+        }
+
+    }
+    //将文件读取为DataURL
+    function readAsDataURL(){
+        var file = document.getElementById("rd").files[0];
+        var reader = new FileReader();
+        //图片验证
+        if (!/image\/\w+/.test(file.type)){
+            alert("只能输出图片");
+            return ;
+        }
+        //二进制形式读取
+        reader.readAsDataURL(file);
+        //onload 加载成功 后触发
+        reader.onload=function(e){
+            var msg = document.getElementById("msg");
+            //把读取到的文本信息显示
+            //msg.value=this.result;
+            //console.info(reader.result);
+            //把图片显示到页面中....
+            msg.innerHTML='<img src='+this.result+' />';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial;
+    line-height: 1.2em;
+    color: #000;
+}
+
+header{
+    width: 1200px;
+    margin: auto;
+    height: 300px;
+    /*background: #0066cc;*/
+    border: groove 2px gainsboro;
+}
+#article1{
+    width: 1200px;
+    height: 1300px;
+    margin: auto;
+    display: block;
+    position: relative;
+}
+#article1>ul>li{
+    float: left;
+    list-style-type: none;
+    /*display: inline;*/
+}
+#article1>ul #li_left_a,
+#article1>ul #li_left_b,
+#article1>ul #li_left_c,
+#article1>ul #li_left_d,
+#article1>ul #li_left_e,
+#article1>ul #li_left_f,
+#article1>ul #li_left_g,
+#article1>ul #li_left_h,{
+    width: 920px;
+    height: 1200px;
+    margin-right: 30px;
+    position: absolute;
+    background: rgba(100,100,100,0.1);
+    left: 0px;
+    top: 100px;
+}
+#article1>ul .li_right{
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    background: rgba(100,100,100,0.1);
+    padding: 10px;
+    border: 5px groove rgba(100,100,100,0.5);
+    right: 0px;
+}
+h3,h4{
+    background: #0066cc;
+    color: #fff;
+    padding: 5px;
+}
+
+
+/*=================菜单栏===================*/
+#li_nav{
+    width: 920px;
+    height: 100px;
+    float: right;
+}
+
+#nav{
+    width: 920px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #0066cc;
+}
+#nav>ul{
+    /*position: absolute;*/
+    /*left: 30px;*/
+    /*margin: 0;*/
+}
+#nav>ul>li{
+    width: 100px;
+    height: 100px;
+    padding:20px;
+    float: left;
+    cursor: pointer;
+    list-style-type: none;
+}
+#nav>ul>li:hover{
+
+    animation-name: burst;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    /* Firefox: */
+    -moz-animation-name: burst;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: .1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    -moz-animation-play-state: running;
+    /* Safari 和 Chrome: */
+    -webkit-animation-name: burst;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: .1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    /* Opera: */
+    -o-animation-name: burst;
+    -o-animation-duration: 1s;
+    -o-animation-timing-function: linear;
+    -o-animation-delay: .1s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: alternate;
+    -o-animation-play-state: running;
+
+}
+
+/*=================NAV动画==================*/
+@keyframes burst {
+    0%{
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-in;
+    }
+    37% {
+        -webkit-transform: scale(1.5);
+        animation-timing-function: ease-out;
+    }
+    55% {
+        -webkit-transform: scale(1.37);
+        animation-timing-function: ease-in;
+    }
+    73% {
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+    82% {
+        -webkit-transform: scale(1.45);
+        animation-timing-function: ease-in;
+    }
+    91% {
+        -webkit-transform: scale(1.5);
+        animation-timing-function: ease-out;
+    }
+    96% {
+        -webkit-transform: scale(1.4);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+}
+@-moz-keyframes burst {
+    0%{
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-in;
+    }
+    37% {
+        -webkit-transform: scale(1.5);
+        animation-timing-function: ease-out;
+    }
+    55% {
+        -webkit-transform: scale(1.37);
+        animation-timing-function: ease-in;
+    }
+    73% {
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+    82% {
+        -webkit-transform: scale(1.45);
+        animation-timing-function: ease-in;
+    }
+    91% {
+        -webkit-transform: scale(1.5);
+        animation-timing-function: ease-out;
+    }
+    96% {
+        -webkit-transform: scale(1.4);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+}
+@-webkit-keyframes burst {
+    0%{
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-in;
+    }
+    37% {
+        -webkit-transform: scale(1.5);
+        animation-timing-function: ease-out;
+    }
+    55% {
+        -webkit-transform: scale(1.37);
+        animation-timing-function: ease-in;
+    }
+    73% {
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+    82% {
+        -webkit-transform: scale(1.45);
+        animation-timing-function: ease-in;
+    }
+    91% {
+        -webkit-transform: scale(1.5);
+        animation-timing-function: ease-out;
+    }
+    96% {
+        -webkit-transform: scale(1.4);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+}
+@-o-keyframes burst {
+    0%{
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-in;
+    }
+    37% {
+        -webkit-transform: scale(1.5);
+        animation-timing-function: ease-out;
+    }
+    55% {
+        -webkit-transform: scale(1.37);
+        animation-timing-function: ease-in;
+    }
+    73% {
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+    82% {
+        -webkit-transform: scale(1.45);
+        animation-timing-function: ease-in;
+    }
+    91% {
+        -webkit-transform: scale(1.5);
+        animation-timing-function: ease-out;
+    }
+    96% {
+        -webkit-transform: scale(1.4);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+}
+
+/*=================内容===================*/
+.dh_div{
+    width: 920px;
+    height: 300px;
+}
+.zb_div{
+    width: 920px;
+    height: 400px;
+}
+.zx_div{
+    width: 920px;
+    height: 400px;
+ }
+/*==================display:none=================*/
+.li_display_none{
+    display: none;
+}
+.li_display_block{
+    display: block;
+}
+/*=================人物简介===================*/
+.users_div{
+    width: 250px;
+}
+
+
+/*============================页脚===============================*/
+
+#footer{
+    width: 1200px;
+    height: 300px;
+    background: rgba(0,0,0,0.8);
+    margin: auto;
+    color: #fff;
+}

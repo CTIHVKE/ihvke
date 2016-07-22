@@ -1,0 +1,32 @@
+/*==ÂÖ²¥Ð¡µã±³¾°==*/
+.my-car-bg{
+    background: rgba(128,128,128,0.5);
+}
+/*===¼ò½é==*/
+.my-img-size{
+    min-width: 30px;
+    width: 60%;
+}
+.my-img-size img{
+    width: 100%;
+    height: 100%;
+}
+.my-img-auto{
+    margin: 0px auto;
+}
+.my-img-t10{
+    margin: 10px auto;
+}
+.my-img-l0{
+    margin-left: 0;
+}
+.my-img-r0{
+    margin-right: 0;
+}
+.my-pading-zrom{
+    padding: 0;
+}
+/*===¼ò½é==*/
+
+
+
