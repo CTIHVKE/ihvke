@@ -84,9 +84,9 @@
 
 <script src="index/javascripts/canvas.js"></script>
 <script>
-    canvas.load(function(){
+    $("#myCanvas").load(function(){
         run();
-    })
+    });
     function run(){
         var c=document.getElementById("myCanvas");
         var ctx=c.getContext("2d");
@@ -107,6 +107,7 @@
         ctx.fill();
     }
 </script>
+
 <script src="index/javascripts/ajax.js"></script>
 </body>
 </html>
