@@ -9,7 +9,7 @@ $(document).ready(function() {
     addtxt();
     function addtxt (){
         //$("#p_new").load('sql_txt/d20160610.html');
-        inner = $.ajax({url:"index/sql_txt/d20160610",async:true});
+        inner = $.ajax({url:"index/sql_txt/d20160610",async:false});
         $("#p_new").html(inner.responseText);
     }
 });
