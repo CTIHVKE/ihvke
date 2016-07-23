@@ -3,7 +3,7 @@
  */
 //×Ô¶¯ÐÞ¸´ÆÆËðÍ¼Ïñ
 $('img').on('error',function(){
-    $(this).prop('src','../72f082025aafa40f665a4640ac64034f79f0198a.jpg');
+    $(this).prop('src','../error.jpg');
 })
 
 //µÇÂ¼:  login       m-login1 .class(display:block)     µÇÂ¼
