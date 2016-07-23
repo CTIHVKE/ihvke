@@ -56,6 +56,7 @@ $('img').on('error',function(){
 //    if(!document.getElementById) return false;
 //    click();
 //}
+var jsontxt =  JSON({"mei":"美","li":"丽","dong":"动","ren":"人","text":"美丽动人"});
 
 function run(){
     var c=document.getElementById("myCanvas");
@@ -69,11 +70,11 @@ function run(){
 
     ctx.beginPath();
     ctx.fillStyle="#fff";
-    ctx.fillText("美",100,100);
-    ctx.fillText("丽",120,120);
-    ctx.fillText("动",140,140);
-    ctx.fillText("人",160,160);
-    ctx.fillText("美丽动人",100,180);
+    ctx.fillText(jsontxt.mei.toString(),100,100);
+    ctx.fillText(jsontxt.li.toString(),120,120);
+    ctx.fillText(jsontxt.dong.toString(),140,140);
+    ctx.fillText(jsontxt.ren.toString(),160,160);
+    ctx.fillText(jsontxt.text.toString(),100,180);
     ctx.fill();
 }
 

@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     function addtxt (){
         //$("#p_new").load('sql_txt/d20160610.html');
-        inner = $.ajax({url:"sql_txt/d20160610",async:false});
+        inner = $.ajax({url:"index/sql_txt/d20160610",async:true});
         $("#p_new").html(inner.responseText);
     }
 });

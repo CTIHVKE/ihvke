@@ -29,4 +29,34 @@
 /*===¼ò½é==*/
 
 
+/*===ÖªÊ¶µã===*/
+.jsd div{
+    padding: 0px;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.jsd a{
+    /*width: 100%;*/
+    /*height: 100%;*/
+    min-height: 100px;
+    display: block;
+}
+.jsd a{
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 10px;
+    margin: 20px;
+}
+.jsd a img{
+    width: 32px;
+    height: 32px;
+}
+
+
+/*==color====*/
+.my-bg-color{
+    background: rgba(128,128,128,0.2);
+}
 
