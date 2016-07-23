@@ -39,10 +39,10 @@ div{
 
 .m-top,.m-top .wrap,.m-top .logo a,.m-nav li,.m-nav li a,.login1,.m-main,
 .cor,.m-srch .srchbg,.m-subnav,.m-subnav .nav a, .m-subnav .nav .z-slt,.m-subnav .nav a em{
-    background: url("web2/img/frame/topbar.png") no-repeat 0 9999px;
+    background: url("../images/img/frame/topbar.png") no-repeat 0 9999px;
 }
 .u-btn2, .u-btn2 i, .u-btn2 .icn, .u-btni, .u-btni i, .u-tag, .u-tag i, .u-btni-addply .ply{
-    background: url("web2/img/button2.png") no-repeat 0 9999px;
+    background: url("../images/img/button2.png") no-repeat 0 9999px;
 }
 
 *{
@@ -148,7 +148,7 @@ li{
 
 /*login1===============µÇÂ¼*/
 .m-login1 .icn,.m-login1 .arr{
-    background: url("web2/img/frame/toplist.png") no-repeat 0 9999px;
+    background: url("../images/img/frame/toplist.png") no-repeat 0 9999px;
 }
 
 .login1{
@@ -331,7 +331,7 @@ li{
 
 /*======ÂÖ²¥===*/
 .n-ban .ban .btnl,.n-ban .ban .btnr,.n-ban .dots .bg,.n-ban .download .shadow,.n-ban .download .shadowr{
-    background: url("web2/img/index/banner.png") no-repeat 0 9999px;
+    background: url("../images/img/index/banner.png") no-repeat 0 9999px;
 }
 
 .n-ban{
@@ -410,7 +410,7 @@ li{
 
 /*===========download==========*/
 .n-ban .download,.n-ban .download .btn{
-    background: url("web2/img/index/download.png") no-repeat 0 0;
+    background: url("../images/img/index/download.png") no-repeat 0 0;
 }
 .n-ban .download{
     position: absolute;
@@ -459,11 +459,11 @@ li{
 
 /*==========ÄÚÈÝ==========*/
 .s-bg,.v-hd2,.n-disk li{
-    background: url("web2/img/index/index.png") no-repeat 0 9999px;
+    background: url("../images/img/index/index.png") no-repeat 0 9999px;
 }
 
 .g-bdl{
-    background: url("web2/img/frame/wrap1.png") repeat-y 100% 100%;
+    background: url("../images/img/frame/wrap1.png") repeat-y 100% 100%;
 }
 .g-bdl{
     width: 980px;
@@ -543,13 +543,13 @@ a.s-fc3:hover{
 }
 /*=======ÈÈÃÅÍÆ¼öÄÚÈÝ=======*/
 .u-cover .bottom, .u-cover .msk, .n-musicsd .lst .avatar .msk{
-    background: url("web2/img/coverall.png") no-repeat;
+    background: url("../images/img/coverall.png") no-repeat;
 }
 .u-cover .ply, .u-cover .icon-headset, .u-cover .icon-play, .u-face .msk, .n-note .head .msk, .icn-vip, .icn-daren{
-    background: url("web2/img/iconall.png") no-repeat;
+    background: url("../images/img/iconall.png") no-repeat;
 }
 .u-icn, .u-title-1 .out .icon{
-    background: url("web2/img/icon.png") no-repeat 0 9999px;
+    background: url("../images/img/icon.png") no-repeat 0 9999px;
 }
 
 .n-rcmd .m-cvrlst{
@@ -706,7 +706,7 @@ a.s-fc3:hover{
     background-position: -320px -75px;
 }
 /*.s-bg,.v-hd2,.n-disk li{*/
-    /*background: url("web2/img/index/index.png");*/
+    /*background: url("images/img/index/index.png");*/
 /*}*/
 .n-disk .roll{
     float: left;
@@ -780,7 +780,7 @@ a.s-fc3:hover{
     padding-left: 1px;
 }
 .n-bilst{
-    background: url("web2/img/index/index_bill.png") no-repeat;
+    background: url("../images/img/index/index_bill.png") no-repeat;
 }
 .n-bilst .blk{
     float: left;
@@ -930,7 +930,7 @@ a.s-fc3:hover{
 
 
 .m-back, .m-lycifo .downapp, .m-ft .logo, .m-plshare .btn, .m-pubcode .code, .m-multi .bg, .m-multi .bg a:hover{
-    background: url("web2/img/sprite.png") no-repeat 0 9999px;
+    background: url("../images/img/sprite.png") no-repeat 0 9999px;
 }
 /*========= Ò³½Å ==========*/
 .g-ft{
@@ -1199,16 +1199,16 @@ a.s-fc3:hover{
 
 /*=======²¥·Å=======*/
 .m-playbar .updn .left, .m-playbar .updn .right, .m-playbar .updn .btn, .m-playbar .bg, .m-playbar .btns a, .m-playbar .head .mask, .m-playbar .icn, .m-playbar .ctrl, .m-playbar .tip, .m-vol .curr, .m-playbar .words .mv, .m-vol .barbg, .m-playbar .words .src{
-    background: url("web2/img/frame/playbar.png") no-repeat 0 9999px;
+    background: url("../images/img/frame/playbar.png") no-repeat 0 9999px;
 }
 .m-playbar .btns, .m-playbar .head, .m-playbar .play, .m-playbar .volum, .m-playbar .oper{
     float: left;
 }
 .m-pbar .barbg, .m-pbar .cur, .m-pbar .rdy, .m-pbar .left{
-    background: url("web2/img/frame/statbar.png") no-repeat 0 9999px;
+    background: url("../images/img/frame/statbar.png") no-repeat 0 9999px;
 }
 .m-pbar .btn, .m-vol .btn{
-    background: url("web2/img/iconall.png") no-repeat;
+    background: url("../images/img/iconall.png") no-repeat;
 }
 
 .g_btmbar{
@@ -1400,7 +1400,7 @@ a.s-fc3:hover{
     top: 5px;
     width: 12px;
     height: 12px;
-    background: url("web2/img/outchain/loading.gif");
+    background: url("../images/img/outchain/loading.gif");
 }
 .m-pbar .time{
     position: absolute;

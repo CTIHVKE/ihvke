@@ -180,7 +180,7 @@ gnav6.click(function(){
     return false;
 });
 
-//轮播 1           id:  rbl        id: rbr       img:  rbimg .class(src,"改变")     id: rbbg    .css(background-image,"url('muscicwy/style/web2/img/list/-iVsMiDLA8E1C90vmAY0gw==_1417270501408429.jpg')")
+//轮播 1           id:  rbl        id: rbr       img:  rbimg .class(src,"改变")     id: rbbg    .css(background-image,"url('muscicwy/style/images/img/list/-iVsMiDLA8E1C90vmAY0gw==_1417270501408429.jpg')")
 //轮播 1           id: dots >a .addclass(z-slt)    /   removerclass(z-slt)
 var i=0;        //轮播  下标
 var l = 7;      //数组长度
@@ -190,24 +190,24 @@ var imgtime = 4000;     //图片 变化 速度
 
 
 var rbbgurl = new Array(l);     //=======背景
-rbbgurl[0] = "style/web2/img/list/HM-AiAwwbaReP1llC7bszA==_3252355404316853.jpg";
-rbbgurl[1] = "style/web2/img/list/kYkA-d9uDkokbjXwcyjpeg==_1415071477690876.jpg";
-rbbgurl[2] = "style/web2/img/list/-iVsMiDLA8E1C90vmAY0gw==_1417270501408429.jpg";
-rbbgurl[3] = "style/web2/img/list/29RCG8hkuFggtq5yfneHkA==_3252355405429373.jpg";
-rbbgurl[4] = "style/web2/img/list/F9ofY394yqTj61SU4aIHMQ==_1404076361722166.jpg";
-rbbgurl[5] = "style/web2/img/list/XWnTOKW0PtVfESYCtdAOpA==_1383185640416892.jpg";
-rbbgurl[6] = "style/web2/img/list/FaXbZiwts0ywz4hS4TVmCA==_2946691190428891.jpg";
-rbbgurl[7] = "style/web2/img/list/sVcsyWgtpL-6BHdwCb0_GQ==_3412884108304927.jpg";
+rbbgurl[0] = "images/img/list/HM-AiAwwbaReP1llC7bszA==_3252355404316853.jpg";
+rbbgurl[1] = "images/img/list/kYkA-d9uDkokbjXwcyjpeg==_1415071477690876.jpg";
+rbbgurl[2] = "images/img/list/-iVsMiDLA8E1C90vmAY0gw==_1417270501408429.jpg";
+rbbgurl[3] = "images/img/list/29RCG8hkuFggtq5yfneHkA==_3252355405429373.jpg";
+rbbgurl[4] = "images/img/list/F9ofY394yqTj61SU4aIHMQ==_1404076361722166.jpg";
+rbbgurl[5] = "images/img/list/XWnTOKW0PtVfESYCtdAOpA==_1383185640416892.jpg";
+rbbgurl[6] = "images/img/list/FaXbZiwts0ywz4hS4TVmCA==_2946691190428891.jpg";
+rbbgurl[7] = "images/img/list/sVcsyWgtpL-6BHdwCb0_GQ==_3412884108304927.jpg";
 
 var rbimgurl = new Array(l);        //=====图片
-rbimgurl[0] = "style/web2/img/list/0ElaknCrBlCrHLem2jeOzw==_3394192409054137.jpg";
-rbimgurl[1] = "style/web2/img/list/0xq0n8YTfYStD4UNGejxMQ==_1400777826849846.jpg";
-rbimgurl[2] = "style/web2/img/list/4GxwaCJPg9FEtNfM6fZwfA==_3394192410645891.jpg";
-rbimgurl[3] = "style/web2/img/list/bFf6En2GydBMXHFpeiao5A==_3419481170226230.jpg";
-rbimgurl[4] = "style/web2/img/list/dbg7M0BhWj-GBqSWO7JaeA==_3419481170226236.jpg";
-rbimgurl[5] = "style/web2/img/list/G1P03zkzV5aNGYjUrgR7-Q==_3412884106594002.jpg";
-rbimgurl[6] = "style/web2/img/list/wzbiaJOtXFp0mnVKsYksTg==_1382086128833855.jpg";
-rbimgurl[7] = "style/web2/img/list/xysZAeHT5eSmZp5289B9bQ==_1400777826849842.jpg";
+rbimgurl[0] = "images/img/list/0ElaknCrBlCrHLem2jeOzw==_3394192409054137.jpg";
+rbimgurl[1] = "images/img/list/0xq0n8YTfYStD4UNGejxMQ==_1400777826849846.jpg";
+rbimgurl[2] = "images/img/list/4GxwaCJPg9FEtNfM6fZwfA==_3394192410645891.jpg";
+rbimgurl[3] = "images/img/list/bFf6En2GydBMXHFpeiao5A==_3419481170226230.jpg";
+rbimgurl[4] = "images/img/list/dbg7M0BhWj-GBqSWO7JaeA==_3419481170226236.jpg";
+rbimgurl[5] = "images/img/list/G1P03zkzV5aNGYjUrgR7-Q==_3412884106594002.jpg";
+rbimgurl[6] = "images/img/list/wzbiaJOtXFp0mnVKsYksTg==_1382086128833855.jpg";
+rbimgurl[7] = "images/img/list/xysZAeHT5eSmZp5289B9bQ==_1400777826849842.jpg";
 
 //======改变HTML  的参数=====
 function rbchange(i){
@@ -458,13 +458,13 @@ $("#top-flag li.z-hvr").each(function(){
 //==========audio======
 //音乐url
 var musurl = new Array();
-musurl[0] = "muscicwy/music/爱情公寓主题曲.mp3";
-musurl[1] = "muscicwy/music/周杰伦听妈妈的话.mp3";
-musurl[2] = "muscicwy/music/周杰伦稻香.mp3";
-musurl[3] = "muscicwy/music/专属天使.mp3";
-musurl[4] = "muscicwy/music/周杰伦龙卷风.mp3";
-musurl[5] = "muscicwy/music/最初的梦想.mp3";
-musurl[6] = "muscicwy/music/左边.mp3";
+musurl[0] = "music/爱情公寓主题曲.mp3";
+musurl[1] = "music/周杰伦听妈妈的话.mp3";
+musurl[2] = "music/周杰伦稻香.mp3";
+musurl[3] = "music/专属天使.mp3";
+musurl[4] = "music/周杰伦龙卷风.mp3";
+musurl[5] = "music/最初的梦想.mp3";
+musurl[6] = "music/左边.mp3";
 var musrlen =parseInt(musurl.length)-1;   //音乐最大下标
 
 //获取音乐时长
