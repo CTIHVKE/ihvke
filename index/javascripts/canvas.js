@@ -56,27 +56,28 @@ $('img').on('error',function(){
 //    if(!document.getElementById) return false;
 //    click();
 //}
+
 //var jsontxt =  JSON({"mei":"美","li":"丽","dong":"动","ren":"人","text":"美丽动人"});
-
-function run(){
-    var c=document.getElementById("myCanvas");
-    var ctx=c.getContext("2d");
-    ctx.fillStyle="#FF0000";
-    ctx.fillRect(0, 0 ,500,300);
-
-    ctx.beginPath();
-    ctx.arc(95,50,40,0,2*Math.PI);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.fillStyle="#fff";
-    ctx.fillText("美",100,100);
-    ctx.fillText("丽",120,120);
-    ctx.fillText("动",140,140);
-    ctx.fillText("人",160,160);
-    ctx.fillText("美丽动人",100,180);
-    ctx.fill();
-}
+//
+//function run(){
+//    var c=document.getElementById("myCanvas");
+//    var ctx=c.getContext("2d");
+//    ctx.fillStyle="#FF0000";
+//    ctx.fillRect(0, 0 ,500,300);
+//
+//    ctx.beginPath();
+//    ctx.arc(95,50,40,0,2*Math.PI);
+//    ctx.stroke();
+//
+//    ctx.beginPath();
+//    ctx.fillStyle="#fff";
+//    ctx.fillText("美",100,100);
+//    ctx.fillText("丽",120,120);
+//    ctx.fillText("动",140,140);
+//    ctx.fillText("人",160,160);
+//    ctx.fillText("美丽动人",100,180);
+//    ctx.fill();
+//}
 
 
 

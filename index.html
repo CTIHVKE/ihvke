@@ -83,6 +83,30 @@
 
 
 <script src="index/javascripts/canvas.js" charset="gb2312"></script>
+<script>
+    canvas.load(function(){
+        run();
+    })
+    function run(){
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+        ctx.fillStyle="#FF0000";
+        ctx.fillRect(0, 0 ,500,300);
+
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.fillStyle="#fff";
+        ctx.fillText("美",100,100);
+        ctx.fillText("丽",120,120);
+        ctx.fillText("动",140,140);
+        ctx.fillText("人",160,160);
+        ctx.fillText("美丽动人",100,180);
+        ctx.fill();
+    }
+</script>
 <script src="index/javascripts/ajax.js"></script>
 </body>
 </html>
