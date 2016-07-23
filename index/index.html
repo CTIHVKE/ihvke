@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梦里日记</title>
+
+</head>
+
+<link rel="stylesheet" href="index.css" >
+<script src="../kuangjia/jquery-2.2.3.min.js"></script>
+
+
+<body onload="run()">
+
+<header id="header">
+    <canvas id="myCanvas" width="500" height="300"
+            style="border:1px solid #000000;">
+    </canvas>
+</header>
+<!--<hr/>-->
+
+
+<article id="article1">
+    <ul>
+        <li id="li_nav">
+            <nav id="nav">
+                <ul>
+                    <li id="li_a" TITLE="真相是"><a href="../jquerymobile/jquerymobile.html"><img src="images/TRUE1.png" width="60" height="60" title="QQ音乐"></a></li>
+                   <li id="li_b" TITLE="写日记"> <a href="../bootstrap_test/bootstrap_test.html"><img src="images/BI.png" width="60" height="60" title="bootstrap"></a></li>
+                    <li id="li_c" TITLE="看日记"><a href="../muscicwy/musicwy.html"><img src="images/BJ.png" width="60" height="60" title="音乐"></a></li>
+                    <li id="li_d" TITLE="要约吗"><a href="../kuangjia/angular/angular_test.html"><img src="images/GIRL.png" width="60" height="60"></a></li>
+                    <li id="li_e" TITLE="小黄人"><img src="images/HUANRE.png" width="60" height="60"></li>
+                    <li id="li_f" TITLE="海贼王"><img src="images/LUFI.png" width="60" height="60"></li>
+                    <li id="li_g" TITLE="留言区"><img src="images/PINGLU.png" width="60" height="60"></li>
+                    <li id="li_h" TITLE="求推广"><img src="images/TUGUAN.png" width="60" height="60"></li>
+                </ul>
+            </nav>
+        </li>
+        <li class="li_display_block" id="li_left_a">
+
+            <h3>动画演示</h3>
+            <div class="dh_div">
+                <canvas id="Canvas1" width="920" height="300px">画板</canvas>
+            </div>
+            <hr/>
+            <h3>作品展示</h3>
+            <div class="zb_div">
+
+            </div>
+            <hr/>
+            <h3>最新日记</h3>
+            <div class="zx_div">
+                <p id="p_new" style="padding: 5px"></p>
+            </div>
+        </li>
+        <li class="li_display_none" id="li_left_b" style="display: none">
+            <h3>写日记</h3>
+            <textarea id="textarea" style="width: 100%;height: 90%;max-width: 100%;max-height: 90%;"></textarea>
+            <br/>
+            <button id="bt_ok">确定</button>
+        </li>
+        <li class="li_display_none" id="li_left_c" style="display: none"></li>
+        <li class="li_display_none" id="li_left_d" style="display: none"></li>
+        <li class="li_display_none" id="li_left_e" style="display: none"></li>
+        <li class="li_display_none" id="li_left_f" style="display: none"></li>
+        <li class="li_display_none" id="li_left_g" style="display: none"></li>
+        <li class="li_display_none" id="li_left_h" style="display: none"></li>
+        <li class="li_right">
+            <div class="users_div">
+                <span>人物简介</span>
+            </div>
+        </li>
+    </ul>
+</article>
+<div style="clear: both;height: 10px"></div>
+
+<footer id="footer" style="display: flex;overflow: hidden">
+<hr/>
+    <p style="width: 35%;padding: 30px;color:#fff;opacity: 0.3">one</p>
+    <p style="width: 30%;color:#fff;padding: 30px 0;opacity: 0.3">two</p>
+    <p style="width: 35%;padding: 30px;color:#fff;opacity: 0.3">three</p>
+</footer>
+
+
+<script src="javascripts/canvas.js"></script>
+<script>
+    $("#myCanvas").load(function(){
+        run();
+    });
+    function run(){
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+        ctx.fillStyle="#FF0000";
+        ctx.fillRect(0, 0 ,500,300);
+
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.fillStyle="#fff";
+        ctx.fillText("美",100,100);
+        ctx.fillText("丽",120,120);
+        ctx.fillText("动",140,140);
+        ctx.fillText("人",160,160);
+        ctx.fillText("美丽动人",100,180);
+        ctx.fill();
+    }
+</script>
+
+<script src="javascripts/ajax.js"></script>
+</body>
+</html>
