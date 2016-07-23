@@ -7,8 +7,6 @@ $(document).ready(function() {
 
     //展示日记
     addtxt();
-
-
     function addtxt (){
         //$("#p_new").load('sql_txt/d20160610.html');
         inner = $.ajax({url:"index/sql_txt/d20160610",async:true});
