@@ -65,9 +65,39 @@
 
     .resumeBody .titleb{
         position: absolute;
-        top: 20px;
-        right: 50px;
+        top: 5%;
+        right: 15%;
         border: 1px solid red;
+        width: auto;
+        height: 32px;
+        opacity: 0.6;
+        z-index: 99;
+    }
+    .resumeBody .titleb a{
+        text-decoration: none;
+        text-align: center;
+    }
+    .resumeBody .titleb h1{
+        color: red;
+    }
+    .resumeBody .titleb{
+        transform:rotate(30deg);
+        -ms-transform:rotate(30deg); /* IE 9 */
+        -webkit-transform:rotate(30deg); /* Safari and Chrome */
+    }
+    .resumeBody .titlebbg{
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        border: 1px solid red;
+        background: rgba(11,150,11,0.6);
+        color: #fff;
+        width: auto;
+        height: 32px;
+        z-index: 33;
+    }
+    .resumeBody .titlebbg h1{
+        color: #fff;
     }
 
     .resumeBody strong, .resumeBody h1, .resumeBody h5, .resumeBody h6 {
@@ -133,8 +163,11 @@
 </head>
 <body style="max-width: 720px;margin: 10px auto">
 <div class="resumeBody">
+    <div class="titlebbg">
+        <h1>www.ihvke.xyz</h1>
+    </div>
     <div class="titleb">
-
+        <a href="../../index.html" title="ihvke.xyz"><h1>个人网站</h1></a>
     </div>
 
     <div class="summary"><img width="70" height="90" align="right" class="headerImg" alt="陈成添"

@@ -1,0 +1,15 @@
+.my-color-339933{
+    color: #339933;
+}
+.my-color-f{
+    color: #fff;
+}
+.my-bg-000{
+    background: rgba(0,0,0,0.8);
+}
+.positiontop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
