@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5拍照</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../kuangjia/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+
+    <!--<script type="text/javascript" src="kuangjia/angular/angular.min.js"></script>-->
+    <script type="text/javascript" src="../kuangjia/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="../kuangjia/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12" style="border: 1px solid #339933">
+                <video id="video" autoplay="" style="width: 480px;height: 360px"></video>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12" style="border: 1px solid #339933">
+                <canvas id="canvas" width="480" height="360"></canvas>
+            </div>
+        </div>
+    <br/>
+    <button id="paizhao" style="width: 100%">拍照</button>
+</div>
+
+<script type="text/javascript" src="paizhao.js">
+</script>
+</body>
+</html>

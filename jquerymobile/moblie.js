@@ -5,6 +5,19 @@
 $('img').on('error',function(){
     $(this).prop('src','../error.jpg');
 })
+//========初化轮播
+$(document).ready(function(){
+    $("#myCarousel").carousel('cycle');
+
+    $(document).on("swiperight",function() {    //向右滑动
+        $("#myCarousel").carousel('prev');
+    });
+
+    $(document).on("swipeleft", function () {   //向左滑动
+        $("#myCarousel").carousel('next');
+    });
+
+});
 
 //
 //$(document).on("pagecreate","#pageone",function(){
