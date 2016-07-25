@@ -507,18 +507,22 @@ function playoper(id,obj){
     nxtzd(this);
     if(audio.paused){
         audio.play();
+        $("#ply").css("background-position","0px -165px");
         //this.css({"background-positionx":"0px","background-positiony":"0px"});
         return;
     }
     audio.pause();
+    $("#ply").css("background-position","0px -204px");
 }
 function chagemusic(cm){
     if(audio.played){
         audio.pause();
+        $("#ply").css("background-position","0px -204px");
     }
     audio.src=musurl[cm];
     nxtzd(this);
     audio.play();
+    $("#ply").css("background-position","0px -165px");
 }
 //ÉÏÒ»Ê×
 var chagm = 0;
