@@ -458,13 +458,13 @@ $("#top-flag li.z-hvr").each(function(){
 //==========audio======
 //音乐url
 var musurl = new Array();
-musurl[0] = "music/爱情公寓主题曲.mp3";
-musurl[1] = "music/周杰伦听妈妈的话.mp3";
-musurl[2] = "music/周杰伦稻香.mp3";
-musurl[3] = "music/专属天使.mp3";
-musurl[4] = "music/周杰伦龙卷风.mp3";
-musurl[5] = "music/最初的梦想.mp3";
-musurl[6] = "music/左边.mp3";
+musurl[0] = "music/aqgyztq.mp3";
+musurl[1] = "music/zjltmmdh.mp3";
+musurl[2] = "music/zjldx.mp3";
+musurl[3] = "music/zsts.mp3";
+musurl[4] = "music/zjlljf.mp3";
+musurl[5] = "music/zcdmx.mp3";
+musurl[6] = "music/zb.mp3";
 var musrlen =parseInt(musurl.length)-1;   //音乐最大下标
 
 //获取音乐时长
