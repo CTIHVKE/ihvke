@@ -11,33 +11,36 @@
     <script type="text/javascript" src="../kuangjia/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="../kuangjia/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../kuangjia/angular/angular.min.js"></script>
-    <script type="text/javascript" src="rsjc.js" charset="utf-8"></script>
 
 </head>
 <body>
 <div ng-app="" class="container">
     <div class="row">
-        <div class="col-md-4 col-xs-12 text-right"><a href="../index.html"><<返回</a></div>
+        <div class="col-md-4 col-xs-12 text-right"><a href="../index.html"><
+            < 返回
+        </a></div>
         <div class="col-md-4 col-xs-12 text-center"><h2>人生检测</h2></div>
-        <div class="col-md-4 col-xs-12"></div>
+        <!--<div class="col-md-4 col-xs-12"></div>-->
     </div>
     <div class="row">
         <div class="text-center col-md-12"><h2>请输入信息</h2></div>
-        <div class="col-md-4 col-xs-12 text-center">
-            <span data-res-from="inname">姓名：</span><input id="inname" class="input-sm" ng-model="inname" size="5" type="text"/>
-            <span data-res-from="insex">性别：</span><input id="insex" class="input-sm" ng-model="insex" size="5" type="text"/>
+        <div class="col-md-12 col-xs-12 text-center">
+            <input id="inname" ng-model="inname" type="text" maxlength="3" placeholder="请输入姓名"/>
+            <br/><br/>
+            <input id="insex" ng-model="insex" type="text" maxlength="1" placeholder="请输入性别：男/女"/>
+            <br/><br/>
+            <input type="number" ng-model="iny" id="iny" maxlength="4" placeholder="请输入出生年：1999"/>
+            <br/><br/>
+            <input type="number" ng-model="inm" id="inm" maxlength="2" placeholder="请输入出生月：12"/>
+            <br/><br/>
+            <input type="number" ng-model="ind" id="ind" maxlength="2" placeholder="请输入出生日：21"/>
         </div>
-        <div class="col-md-4 col-xs-12 text-center">
-            <span data-res-from="iny">出生日期：</span>
-        </div>
-        <div class="col-md-4 col-xs-12 text-center">
-            <input id="iny" ng-model="iny" size="5" type="text" placeholder="1999"/><span>年</span>
-            <input id="inm" ng-model="inm" size="5" type="text" placeholder="6"/><span>月</span>
-            <input id="ind" ng-model="ind" size="5" type="text" placeholder="25"/><span>日</span>
-        </div>
+
+    </div>
+    <div class="row">
+        <hr/>
         <div class="col-md-12 text-center my-color-339933">
-            <hr/>
-            <p>我叫 {{inname}}</p>
+            <span>我叫 {{inname}}</span>
 
             <p>于{{iny}}年{{inm}}月{{ind}}日出生的一个小{{insex}}孩</p>
 
@@ -46,16 +49,175 @@
             </p>
             <ht></ht>
         </div>
-        <!-- 结果-->
-        <div class="col-md-12 text-center my-bg-000 positiontop" style="display: none">
-            <h2 class="my-color-f">你的人生如下：<br>【长按-可保存图片】</h2>
-
-            <div class="col-md-12 my-color-f text-center">
-                <canvas id="canvasjg" width="320" height="640">"人生检测"，对不起，你的浏览器不支持h5的canvas</canvas>
-            </div>
+    </div>
+    <!-- 结果-->
+    <div id="canid" class="col-md-12 text-center my-bg-000 positiontop" style="display: none">
+        <h2 class="my-bg-000 my-color-f">你的人生-我做主<br><span class="hidden visible-xs">【长按-可保存图片】</span></h2>
+        <hr/>
+        <div class="col-xs-12 col-md-12 my-color-f img-circle text-center">
+            <canvas id="canvasjg" class="my-border-fff" width="260" height="380">"人生检测":对不起，你的浏览器不支持h5的canvas</canvas>
         </div>
     </div>
 </div>
+
+<!--<script type="text/javascript" src="rsjc.js" charset="gbk"></script>-->
+
+<script type="text/javascript" charset="utf-8">
+    /**
+     * Created by CTIHVKE on 2016/7/26.
+     */
+
+
+    var canid = document.getElementById("canid");
+
+    var canvar;     //canvasjg 对象
+    var cc;         //canvar。getContext("2d");
+
+    var name = "";
+    var sex = "";
+    var y = "";
+    var m = "";
+    var d = "";
+
+    var str = new Array();
+    str[0]="低调默默无闻";
+    str[1]="财富的欲望";
+    str[2]="很注重公平";
+    str[3]="随遇而安";
+    str[4]="注重生活细节";
+    str[5]="外冷内热";
+    str[6]="善解人意";
+    str[7]="追寻心中所想";
+    str[8]="希望得到认可";
+    str[9]="注重义气";
+    str[10]="缺乏安全感";
+    str[11]="不会轻易许诺";
+    str[12]="十足的闲人";
+    str[13]="十足的闲人";
+
+    var canvarstar = function(){
+        canvar = document.getElementById("canvasjg");
+        cc = canvar.getContext("2d");
+    }
+
+
+    var err = function(){
+        canvar.log("sth strong");
+    }
+    var rd = function(i){
+        return parseInt(Math.random()*i);
+    }
+
+    var gettext = function(){       //取值
+        name = document.getElementById("inname").value;
+        sex = document.getElementById("insex").value;
+        iny =parseInt( document.getElementById("iny").value);
+        inm =parseInt( document.getElementById("inm").value);
+        ind =parseInt( document.getElementById("ind").value);
+    }
+
+    //   =========给画======
+    var dw1 = function(stri,x,y){       //画线
+        cc.font="16px Arial";
+        cc.strokeStyle= "#339933";
+        cc.strokeText(stri,x,y);
+    }
+
+    var dw2 = function(stri,x,y){       //填充
+        cc.font="16px Arial";
+        cc.fillStyle = "#993399";
+        cc.fillText(stri,x,y);
+    }
+
+    var dwname = function(name,sex){       //绘画name
+        cc.font="20px Arial";
+        cc.fillStyle = "#ff0000";
+
+        if(sex == "男") {
+            cc.fillText("我 是 " + name + " 帅 哥", 60, 150);
+        }else if(sex == "女"){
+            cc.fillText("我 是 美 女 " + name , 60, 150);
+        }else{
+            cc.fillText("我 是 " + name , 60, 150);
+        }
+    }
+
+//    检测日期
+    function RQcheck(RQ) {
+        var date = RQ;
+        var result = date.match(/^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/);
+
+        if (result == null)
+            return false;
+        var d = new Date(result[1], result[3] - 1, result[4]);
+        return (d.getFullYear() == result[1] && (d.getMonth() + 1) == result[3] && d.getDate() == result[4]);
+
+    }
+    function CheckAdd(data) {
+        if (!RQcheck(data)){
+            alert("请输入正确的日期");
+            return false;
+        }
+        return true;
+    }
+    //    检测日期
+
+    //======控制=====
+    document.getElementById("stat").addEventListener("click",function(){
+        gettext();
+
+        if(name == "" || sex == "" || iny == "" || inm == "" || ind == ""){
+            alert("请完整输入信息");
+            return;
+        }
+        var data = iny+"-"+inm+"-"+ind;
+        if(CheckAdd(data)){
+            canid.style.display="block";
+            canvarstar();
+            dwname(name,sex);
+            dw1(str[iny%12],30,60);
+            dw2(str[inm%12],60,80);
+            dw1(str[ind%12],80,120);
+
+            dw2(str[rd(1000)%12],160,20);
+            dw1(str[rd(1000)%12],130,40);
+            dw2(str[rd(1000)%12],10,100);
+            dw1(str[rd(1000)%12],150,110);
+
+            dw2(str[rd(1000)%12],160,130);
+            dw1(str[rd(1000)%12],130,270);
+            dw2(str[rd(1000)%12],110,190);
+            dw1(str[rd(1000)%12],150,210);
+
+            dw2(str[rd(1000)%12],90,180);
+            dw1(str[rd(1000)%12],30,220);
+            dw2(str[rd(1000)%12],10,240);
+            dw1(str[rd(1000)%12],50,260);
+
+            dw2(str[rd(1000)%12],7,190);
+            dw1(str[rd(1000)%12],45,210);
+            dw2(str[rd(1000)%12],17,230);
+            dw1(str[rd(1000)%12],45,250);
+
+            dw2(str[rd(1000)%12],89,270);
+            dw1(str[rd(1000)%12],56,290);
+            dw2(str[rd(1000)%12],23,310);
+            dw1(str[rd(1000)%12],75,330);
+
+            dw2(str[rd(1000)%12],35,280);
+            dw1(str[rd(1000)%12],10,310);
+            dw2(str[rd(1000)%12],30,330);
+            dw1(str[rd(1000)%12],70,350);
+
+            dw2(str[rd(1000)%12],135,280);
+            dw1(str[rd(1000)%12],110,310);
+            dw2(str[rd(1000)%12],130,330);
+            dw1(str[rd(1000)%12],170,360);
+        }
+    })
+
+    //======控制=====
+</script>
 
 </body>
 </html>

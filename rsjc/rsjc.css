@@ -13,3 +13,8 @@
     left: 0;
     width: 100%;
 }
+.my-border-fff{
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow:2px 2px 5px  #339933;
+}
